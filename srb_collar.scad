@@ -6,6 +6,8 @@ COLLAR_THICKNESS = 10;
 BOLT_SHAFT = 3;
 BOLT_HEAD = 5;
 
+
+
 difference(){
     
     cylinder(r=(TUBE_DIAMETER/2) + COLLAR_THICKNESS, COLLAR_LENGTH);
