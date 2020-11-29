@@ -1,11 +1,12 @@
 // tube outside diameter: 158.75mm
 
 TUBE_DIAMETER = 158.75;
-COLLAR_LENGTH = 125;
+COLLAR_LENGTH = 90;
 COLLAR_THICKNESS = 10;
-BOLT_SHAFT = 3;
-BOLT_HEAD = 5;
+BOLT_SHAFT = 3.5;
+BOLT_HEAD = 7;
 
+$fn=100;
 
 
 difference(){
@@ -27,28 +28,28 @@ difference(){
     // bottom
     translate([(TUBE_DIAMETER/2)+(COLLAR_THICKNESS/2),0,COLLAR_LENGTH/3]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_SHAFT/2,h=50);
+            cylinder(r=BOLT_SHAFT/2,h=50);
         }
     }
 
     // top
     translate([(TUBE_DIAMETER/2)+(COLLAR_THICKNESS/2),0,(COLLAR_LENGTH/3)*2]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_SHAFT/2,h=50);
+            cylinder(r=BOLT_SHAFT/2,h=50);
         }
     }
     
     // bolt head hole
-    translate([(TUBE_DIAMETER/2)+(COLLAR_THICKNESS/2),-10,COLLAR_LENGTH/3]){
+    translate([(TUBE_DIAMETER/2)+(COLLAR_THICKNESS/2),-8,COLLAR_LENGTH/3]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_HEAD/2,h=50);
+            cylinder(r=BOLT_HEAD/2,h=50);
         }
     }
     
     // bottom
-    translate([(TUBE_DIAMETER/2)+(COLLAR_THICKNESS/2),-10,(COLLAR_LENGTH/3)*2]){
+    translate([(TUBE_DIAMETER/2)+(COLLAR_THICKNESS/2),-8,(COLLAR_LENGTH/3)*2]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_HEAD/2,h=50);
+            cylinder(r=BOLT_HEAD/2,h=50);
         }
     }
     
@@ -56,28 +57,28 @@ difference(){
     // bottom
     translate([-(TUBE_DIAMETER/2)-(COLLAR_THICKNESS/2),0,COLLAR_LENGTH/3]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_SHAFT/2,h=50);
+            cylinder(r=BOLT_SHAFT/2,h=50);
         }
     }
 
     // top
     translate([(-TUBE_DIAMETER/2)-(COLLAR_THICKNESS/2),0,(COLLAR_LENGTH/3)*2]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_SHAFT/2,h=50);
+            cylinder(r=BOLT_SHAFT/2,h=50);
         }
     }
     
     // bolt head hole
-    translate([(-TUBE_DIAMETER/2)-(COLLAR_THICKNESS/2),-10,COLLAR_LENGTH/3]){
+    translate([(-TUBE_DIAMETER/2)-(COLLAR_THICKNESS/2),-8,COLLAR_LENGTH/3]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_HEAD/2,h=50);
+            cylinder(r=BOLT_HEAD/2,h=50);
         }
     }
     
     // bottom
-    translate([(-TUBE_DIAMETER/2)-(COLLAR_THICKNESS/2),-10,(COLLAR_LENGTH/3)*2]){
+    translate([(-TUBE_DIAMETER/2)-(COLLAR_THICKNESS/2),-8,(COLLAR_LENGTH/3)*2]){
         rotate([90,0,0]){
-            #cylinder(r=BOLT_HEAD/2,h=50);
+            cylinder(r=BOLT_HEAD/2,h=50);
         }
     }
 }
